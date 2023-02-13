@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Radio } from "../Component/Radio";
+import { Radio } from "../components/Radio/Radio";
 
 const dataList = [
   {
@@ -40,7 +40,7 @@ export const RadioExample = () => {
     <>
       <div>
         <div>그룹 사용</div>
-        <Radio.Group changeValue={changeValue}>
+        <Radio.Group onChangeValue={changeValue}>
           {dataList.map((data) => {
             const isChecked = selectedValue === data.value;
             return <Radio {...data} isChecked={isChecked}></Radio>;
@@ -49,11 +49,7 @@ export const RadioExample = () => {
       </div>
       <div>
         <div>단독 사용</div>
-        <Radio
-          {...data}
-          isChecked={isChecked}
-          changeChecked={changeChecked}
-        ></Radio>
+        <Radio {...data} isChecked={isChecked} onChange={changeChecked}></Radio>
       </div>
     </>
   );

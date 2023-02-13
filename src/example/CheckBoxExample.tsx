@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckBox } from "../Component/Checkbox";
+import { CheckBox } from "../components/Checkbox/Checkbox";
 
 const dataList = [
   {
@@ -46,7 +46,7 @@ export const CheckBoxExample = () => {
     <>
       <div>
         <div>그룹 사용</div>
-        <CheckBox.Group changeValue={changeValue}>
+        <CheckBox.Group onChangeValue={changeValue}>
           {dataList.map((data) => {
             const isChecked = selectedValueList.includes(data.value);
             return <CheckBox {...data} isChecked={isChecked}></CheckBox>;
@@ -58,7 +58,7 @@ export const CheckBoxExample = () => {
         <CheckBox
           {...data}
           isChecked={isChecked}
-          changeChecked={changeChecked}
+          onChange={changeChecked}
         ></CheckBox>
       </div>
     </>
