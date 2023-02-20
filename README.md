@@ -1,3 +1,18 @@
+# Component list
+
+- Checkbox
+- Radio
+- Button
+- Select
+- Switch
+- Avatar
+- Badge
+- Tab
+- Tag
+- Tooltip
+- Notification
+- Modal
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
