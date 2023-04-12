@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckBox } from "../components/Checkbox/Checkbox";
+import { CheckBox } from "../components/Checkbox";
 
 const dataList = [
   {
