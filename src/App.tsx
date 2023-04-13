@@ -2,12 +2,13 @@ import { useState } from "react";
 import "./App.css";
 import { Button } from "./components/Button";
 import { Option, Select } from "./components/Select";
+import { Switch } from "./components/Switch";
 import { CheckBoxExample } from "./example/CheckBoxExample";
 import { RadioExample } from "./example/RadioExample";
 
 function App() {
   const [selectedValue, setSelectedValue] = useState("");
-
+  const [isOn, setIsOn] = useState(false);
   return (
     <div className="App">
       <CheckBoxExample></CheckBoxExample>
@@ -37,6 +38,13 @@ function App() {
           return <Option value={city}>{city}</Option>;
         })}
       </Select>
+
+      <Switch
+        isOn={isOn}
+        onToggle={() => {
+          setIsOn(!isOn);
+        }}
+      ></Switch>
     </div>
   );
 }
