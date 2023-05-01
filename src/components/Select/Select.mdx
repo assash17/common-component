@@ -1,0 +1,29 @@
+---
+name: Select
+route: /Select
+---
+
+import {useState} from "react"
+import { Playground } from "docz";
+import { Select } from "./Select.tsx";
+import { Option } from "./Option.tsx";
+
+# Select
+
+## Basic usage
+
+<Playground>
+{()=>{
+    const [selectedValue, setSelectedValue] = useState("");
+    return (
+        <Select value={selectedValue} onChange={(newValue)=>{
+            setSelectedValue(newValue);
+        }}>
+            <Option value="AAA"><span>AAA</span></Option>
+            <Option value="BBB"><span>BBB</span></Option>
+            <Option value="CCC"><span>CCC</span></Option>
+        </Select>
+    )
+}}
+
+</Playground>

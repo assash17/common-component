@@ -1,0 +1,25 @@
+---
+name: Switch
+route: /Switch
+---
+
+import {useState} from "react"
+import { Playground } from "docz";
+import { Switch } from ".";
+
+# Switch
+
+## Basic usage
+
+<Playground>
+{()=>{
+    const [isOn, setIsOn] = useState(false);
+    return <Switch
+    isOn={isOn}
+    onToggle={() => {
+        setIsOn(!isOn);
+    }}
+    ></Switch>
+}}
+
+</Playground>

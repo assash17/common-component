@@ -1,0 +1,32 @@
+---
+name: Button
+route: /Button
+---
+
+import { Playground } from "docz";
+import { Button } from ".";
+
+# Button
+
+## Basic usage
+
+<Playground>
+  <Button type="default" size="large" onClick={()=>alert('1')}>
+    1
+  </Button>
+  <Button type="default" size="middle" onClick={()=>alert('2')}>
+    2
+  </Button>
+  <Button type="default" size="small" onClick={()=>alert('3')}>
+    3
+  </Button>
+  <Button type="primary" size="large" onClick={()=>alert('4')}>
+    4
+  </Button>
+  <Button type="primary" size="middle" onClick={()=>alert('5')}>
+    5
+  </Button>
+  <Button type="primary" size="small" onClick={()=>alert('6')}>
+    6
+  </Button>
+</Playground>

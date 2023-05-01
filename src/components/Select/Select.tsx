@@ -25,7 +25,10 @@ export const Select = ({
       {isOpen && (
         <OptionBox
           onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-            const clickedValue = (e.target as HTMLDivElement).dataset.value;
+            const optionBox = (e.target as HTMLElement).closest(
+              "div[data-value]"
+            );
+            const clickedValue = (optionBox as HTMLDivElement).dataset.value;
 
             if (clickedValue !== undefined && clickedValue !== value) {
               onChange(clickedValue);
